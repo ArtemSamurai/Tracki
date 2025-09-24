@@ -118,13 +118,15 @@ body {
     text-decoration: none;   /* убираем подчёркивание */
 }
 
+/* Это основная часть сайта в которой лежат мои любимые треки */
+
 #main{
     width: 40vw;
     height: 50vh;
     color: #fff;
     font-family: "Quicksand", sans-serif;
     float: left;
-    left: 50px;
+    left: 3vw;
     text-align: center;
     display: flex;
     flex-direction: column;
@@ -147,9 +149,9 @@ body {
     border-radius: 12px;
     position: absolute;
     right: -1vh;
-    top: -1vh;
-    height: 57vh;
-    width: 46vw;
+    top: -0.9vh;
+    height: 104%;
+    width: 102%;
     background-image: linear-gradient(to bottom right, #6B3F69, #D3DAD9);
     z-index: -1;
 }
@@ -161,6 +163,8 @@ body {
     z-index: 0;
 }
 
+/* Сюда желательно доабвалять всё что связано в треками обложками и ссылки к ним */
+
 #fashion_ssilka, #Tyler2_ssilka {
     display: flex;
     flex-direction: column;
@@ -169,20 +173,31 @@ body {
     text-decoration: none;
 }
 
+#fashion_ssilka:hover {
+    text-decoration: underline;
+    color: #DDC3C3;
+}
+
 #Tyler2_ssilka {
     margin-bottom: 1px;
+}
+
+#Tyler2_ssilka:hover {
+    text-decoration: underline;
 }
 
 #main:hover a{
     color: inherit;
 }
 
-#fashion_ssilka:active {
-    color: #DDC3C3;
-}
+
 
 .tracki {
     width: 9.5vw;
+    transition: transform 0.3s ease;
+}
+.tracki:hover {
+    transform: scale(1.02);
 }
 /* #btn {
     padding: 1em 2em;
@@ -232,6 +247,8 @@ body {
     left: 25%;
     border-radius: 10px;
     display: flex;
+    flex-direction: column;
+    text-decoration: none;
     justify-content: left;
     align-items: left;
     transition:
@@ -242,10 +259,11 @@ body {
 
 #src-ds {
     display: flex;
+    flex-direction: column;
     justify-content: left;
     align-items: left;
-    margin-top: 10%;
-    margin-left: -20vh;
+    margin-top: 0.5vh;
+    margin-left: -0vh;
     position: absolute;
     width: 25px;
     height: 25px;
@@ -253,10 +271,11 @@ body {
 
 #src-tg {
     display: flex;
+    flex-direction: column;
     justify-content: left;
     align-items: center;
-    margin-top: 21%;
-    margin-left: -20vh;
+    margin-top: 4vh;
+    margin-left: -0vh;
     position: absolute;
     width: 25px;
     height: 25px;

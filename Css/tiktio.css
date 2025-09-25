@@ -179,6 +179,7 @@ body {
 }
 
 #Tyler2_ssilka {
+    margin-top: 10px;
     margin-bottom: 1px;
 }
 
@@ -197,7 +198,7 @@ body {
     transition: transform 0.3s ease;
 }
 .tracki:hover {
-    transform: scale(1.02);
+    transform: scale(1.03);
 }
 /* #btn {
     padding: 1em 2em;
@@ -231,7 +232,7 @@ body {
     box-shadow: 20px 0 80px #008cff, -20px 0 80px #e100ff;
 } */
 
-/* Задача: разобраться с расположением соц сетей */
+/* Задача: разобраться с расположением соц сетей: Выполенена! */
 
 #aside {
     position: relative;
@@ -262,11 +263,16 @@ body {
     flex-direction: column;
     justify-content: left;
     align-items: left;
-    margin-top: 0.5vh;
-    margin-left: -0vh;
+    margin-top: 2%;
+    margin-left: 0%;
     position: absolute;
     width: 25px;
     height: 25px;
+    transition: transform 0.4s ease;
+}
+#src-ds:hover {
+    transform: scale(1.2);
+    filter: drop-shadow(0 0 5px #5865F2);
 }
 
 #src-tg {
@@ -274,11 +280,16 @@ body {
     flex-direction: column;
     justify-content: left;
     align-items: center;
-    margin-top: 4vh;
-    margin-left: -0vh;
+    margin-top: 14%;
+    margin-left: 0%;
     position: absolute;
     width: 25px;
     height: 25px;
+    transition: transform 0.4s ease;
+}
+#src-tg:hover {
+    transform: scale(1.2);
+    filter: drop-shadow(0 0 5px #0088cc);
 }
 
 #aside::after {

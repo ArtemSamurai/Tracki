@@ -10,7 +10,7 @@ body {
     background: #191e24;
 }
 
-@media (max-width: 720px) {
+@media (max-width: 768px) {
   #main {
     width: 60%;          /* растягивается по ширине */
     height: auto;        /* высота под контент */
@@ -18,12 +18,12 @@ body {
     margin: 50px auto;   /* центрируем */
     flex-direction: column;
     align-items: center;
-    margin-left: 200px;
+    margin-left: 27%;
   }
 
   #main::after {
-    left: -1%;
-    height: 100%;
+    left: -0.2vh;
+    height: 102%;
     width: 104%;
 }
   
@@ -31,7 +31,7 @@ body {
     width: 50%;
     height: auto;
     float: none;
-    margin: 10px auto;
+    margin-left: -5%;
   }
 }
 #header {
@@ -40,9 +40,9 @@ body {
     width: 100%;
     height: 100px;
     text-align: center;
-    line-height: 80px;
+    line-height: 50px;
     border: none;
-    background: #222;
+    background: transparent;
     margin-bottom: 50px;
 }
 

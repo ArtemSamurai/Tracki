@@ -131,13 +131,14 @@ body {
     flex-direction: column;
     justify-content: top;
     align-items: left;
-    background: #222831;
+    background: transparent;
     border-radius: 12px;
     border: none;
     padding: 20px 2.5%;
     position: relative;
     align-items: flex-start;
     transition:
+    opacity 0.4s ease,
     color 0.4s ease,
     transform 0.4s ease,
     box-shadow 0.4s ease;
@@ -159,7 +160,6 @@ body {
     color: #DDC3C3;
     transform: scale(1.03);
     box-shadow: -20px 0 80px #6B3F69, 20px 0 80px #D3DAD9;
-    z-index: 0;
 }
 
 /* Сюда желательно доабвалять всё что связано в треками обложками и ссылки к ним */
@@ -236,7 +236,7 @@ body {
     width: -9vw;
     height: 30vh;
     padding: 1em 2em;
-    background-color: #222831;
+    background: transparent;
     border: none;
     color: #f0f0f0;
     font-family: "Quicksand", sans-serif;
@@ -326,13 +326,12 @@ body {
     align-items: center;
     margin-left: 18%;
   }
-
   #main::after {
     top: -0.9vh;
     right: -0.8vh;
     height: 104%;
     width: 104%;
-}
+  }
   #nav li {
     top: 16vh;
     right: 18vh;

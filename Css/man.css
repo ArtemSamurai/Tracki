@@ -10,26 +10,12 @@ body {
     background: #191e24;
 }
 #header {
-    font-family: "Rubik Spray Paint", system-ui;
-    color: aqua;
     width: 100%;
     height: 100px;
     text-align: center;
     line-height: 50px;
     border: none;
     background: transparent;
-    margin-bottom: 50px;
-}
-
-#footer {
-    font-family: "Rubik Spray Paint", system-ui;
-    color: aqua;
-    width: 100%;
-    height: 20%;
-    text-align: center;
-    line-height: 80px;
-    border-bottom: 3.5px solid silver;
-    background: #222;
     margin-bottom: 50px;
 }
 
@@ -83,11 +69,11 @@ body {
     padding: 0.6em 20px;
     border-radius: 1000px;
     transition:
-        background 0.4s ease,
-        color 0.4s ease,
-        transform 0.4s ease,
-        box-shadow 0.4s ease,
-        padding 0.4s ease; /* плавный возврат паддинга */
+        background 0.4s ease-in-out,
+        color 0.4s ease-in-out,
+        transform 0.4s ease-in-out,
+        box-shadow 0.4s ease-in-out,
+        padding 0.4s ease-in-out; /* плавный возврат паддинга */
 }
 
 #nav li::after {
@@ -134,6 +120,7 @@ body {
     background: transparent;
     border-radius: 12px;
     border: none;
+    opacity: 0.5;
     padding: 20px 2.5%;
     position: relative;
     align-items: flex-start;
@@ -152,14 +139,15 @@ body {
     top: -0.9vh;
     height: 104%;
     width: 102%;
-    background-image: linear-gradient(to bottom right, #6B3F69, #D3DAD9);
+    background-image: linear-gradient(to bottom right, #213448, #F4EDD3);
     z-index: -1;
 }
 
 #main:hover {
+    opacity: 0.8;
     color: #DDC3C3;
     transform: scale(1.03);
-    box-shadow: -20px 0 80px #6B3F69, 20px 0 80px #D3DAD9;
+    box-shadow: -20px 0 80px #222831, 20px 0 80px #DFD0B8;
 }
 
 /* Сюда желательно доабвалять всё что связано в треками обложками и ссылки к ним */
@@ -245,14 +233,16 @@ body {
     left: 25%;
     border-radius: 10px;
     display: flex;
+    opacity: 0.5;
     flex-direction: column;
     text-decoration: none;
     justify-content: top;
     align-items: left;
     transition:
-    color 0.4s ease,
-    transform 0.4s ease,
-    box-shadow 0.4s ease;
+    opacity 0.4s ease-in-out,
+    color 0.4s ease-in-out,
+    transform 0.4s ease-in-out,
+    box-shadow 0.4s ease-in-out;
 }
 
 #src-ds {
@@ -265,7 +255,9 @@ body {
     position: absolute;
     width: 25px;
     height: 25px;
-    transition: transform 0.4s ease;
+    transition: 
+    filter 0.4s ease-in-out,
+    transform 0.4s ease-in-out;
 }
 #src-ds:hover {
     transform: scale(1.2);
@@ -282,7 +274,9 @@ body {
     position: absolute;
     width: 25px;
     height: 25px;
-    transition: transform 0.4s ease;
+    transition: 
+    filter 0.4s ease-in-out,
+    transform 0.4s ease-in-out;
 }
 #src-tg:hover {
     transform: scale(1.2);
@@ -302,7 +296,7 @@ body {
 }
 
 #aside:hover {
-    z-index: 0;
+    opacity: 1;
     box-shadow: -20px 0 80px #234C6A, 20px 0 80px #D2C1B6;
     transform: scale(1.05);
     color: #DFD0B8;

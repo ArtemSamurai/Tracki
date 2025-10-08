@@ -9,31 +9,6 @@
 body {
     background: #191e24;
 }
-
-@media (max-width: 768px) {
-  #main {
-    width: 60%;          /* растягивается по ширине */
-    height: auto;        /* высота под контент */
-    float: none;         /* отключаем float */
-    margin: 50px auto;   /* центрируем */
-    flex-direction: column;
-    align-items: center;
-    margin-left: 27%;
-  }
-
-  #main::after {
-    left: -0.2vh;
-    height: 102%;
-    width: 104%;
-}
-  
-  #aside {
-    width: 50%;
-    height: auto;
-    float: none;
-    margin-left: -5%;
-  }
-}
 #header {
     font-family: "Rubik Spray Paint", system-ui;
     color: aqua;
@@ -118,11 +93,11 @@ body {
 #nav li::after {
     content: '';
     position: absolute;
-    height: 104%;
-    width: 104%;
+    height: 109%;
+    width: 106%;
     display: block;
-    top: -2.5%;
-    right: -1.5%;
+    top: -4%;
+    right: -3%;
     border-radius: 1000px;
     background-image: linear-gradient(to bottom right, #008cff, #00ffff);
     z-index: -1;
@@ -214,8 +189,6 @@ body {
 #main:hover a{
     color: inherit;
 }
-
-
 
 .tracki {
     width: 9.5vw;
@@ -341,4 +314,37 @@ body {
     margin-top: 50px;
     border-bottom: 0;
     border-top: 4px solid silver
+}
+
+@media (max-width: 768px) {
+  #main {
+    width: 60%;          /* растягивается по ширине */
+    height: auto;        /* высота под контент */
+    float: none;         /* отключаем float */
+    margin: 50px auto;   /* центрируем */
+    flex-direction: column;
+    align-items: center;
+    margin-left: 18%;
+  }
+
+  #main::after {
+    top: -0.9vh;
+    right: -0.8vh;
+    height: 104%;
+    width: 104%;
+}
+  #nav li {
+    top: 16vh;
+    right: 18vh;
+  }
+  #aside {
+    width: 50%;
+    height: 12vh;
+    float: none;
+    margin-left: -5%;
+  }
+  .tracki {
+    width: 30vw;
+}
+
 }

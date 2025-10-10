@@ -21,22 +21,25 @@ body {
 
 #header {
     float: left;
-    font-family: "impact", sans-serif;
-    animation: 4.5s gradient infinite;
+    font-family: "Quicksand", sans-serif;
+    animation: 10s gradient infinite;
 }
 
 @keyframes gradient {
     0% {
-        color: #04C4C4;
+        color: #4C585B;
+    }
+    25% {
+        color: #7E99A3;
     }
     50% {
-        color: #04C9A8;
+        color: #A5BFCC;
     }
     75% {
-        color: #50c59c;
+        color: #F4EDD3;
     }
     100% {
-        color: #04C4C4;
+        color: #4C585B;
     }
 }
 
@@ -69,7 +72,6 @@ body {
     padding: 0.6em 20px;
     border-radius: 1000px;
     transition:
-        background 0.4s ease-in-out,
         color 0.4s ease-in-out,
         transform 0.4s ease-in-out,
         box-shadow 0.4s ease-in-out,
@@ -90,11 +92,9 @@ body {
 }
 
 #nav li:hover {
-    box-shadow: 0 1px 50px #008cff, 0 1px 50px #00ffff;
     background: #666;
     color: #ff0;
-    padding: 14px 24px; /* увеличенные отступы */
-    transform: scaleX(1.05);
+    transform: scale(1.05);
 }
 
 #nav a {
@@ -125,10 +125,10 @@ body {
     position: relative;
     align-items: flex-start;
     transition:
-    opacity 0.4s ease,
-    color 0.4s ease,
-    transform 0.4s ease,
-    box-shadow 0.4s ease;
+    opacity 0.4s ease-in-out,
+    color 0.4s ease-in-out,
+    transform 0.4s ease-in-out,
+    box-shadow 0.4s ease-in-out;
 }
 
 #main::after {
@@ -256,8 +256,8 @@ body {
     width: 25px;
     height: 25px;
     transition: 
-    filter 0.4s ease-in-out,
-    transform 0.4s ease-in-out;
+    filter 0.3s ease,
+    transform 0.3s ease;
 }
 #src-ds:hover {
     transform: scale(1.2);
@@ -275,8 +275,8 @@ body {
     width: 25px;
     height: 25px;
     transition: 
-    filter 0.4s ease-in-out,
-    transform 0.4s ease-in-out;
+    filter 0.3s ease,
+    transform 0.3s ease;
 }
 #src-tg:hover {
     transform: scale(1.2);

@@ -73,39 +73,32 @@ body {
     border-radius: 1000px;
     transition:
         color 0.4s ease-in-out,
-        transform 0.4s ease-in-out,
-        box-shadow 0.4s ease-in-out,
-        padding 0.4s ease-in-out; /* плавный возврат паддинга */
-}
-
-#nav li::after {
-    content: '';
-    position: absolute;
-    height: 109%;
-    width: 106%;
-    display: block;
-    top: -4%;
-    right: -3%;
-    border-radius: 1000px;
-    background-image: linear-gradient(to bottom right, #008cff, #00ffff);
-    z-index: -1;
+        transform 0.4s ease-in-out;
 }
 
 #nav li:hover {
-    background: #666;
-    color: #ff0;
     transform: scale(1.05);
 }
 
 #nav a {
-    display: block;          /* ссылка тянется по размеру li */
-    color: inherit;          /* наследует цвет */
-    text-decoration: none;   /* убираем подчёркивание */
+    text-decoration: none;
+    color: #fff;
 }
 
 /* Это основная часть сайта в которой лежат мои любимые треки */
 
+#like {
+    font-family: "Quicksand", sans-serif;
+    color: #fff;
+    text-align: center;
+    margin-bottom: 1em;
+    position: relative;
+    font-size: 1.3em;
+    left: 15%;
+}
+
 #main{
+    top: -2vh;
     width: 40vw;
     height: 50vh;
     color: #fff;
@@ -117,7 +110,8 @@ body {
     flex-direction: column;
     justify-content: top;
     align-items: left;
-    background: transparent;
+    overflow: hidden;
+    background-image: linear-gradient(to bottom right, #213448, #F4EDD3);
     border-radius: 12px;
     border: none;
     opacity: 0.5;
@@ -125,22 +119,12 @@ body {
     position: relative;
     align-items: flex-start;
     transition:
+    width 0.4s ease-in-out,
+    height 0.4s ease-in-out,
     opacity 0.4s ease-in-out,
     color 0.4s ease-in-out,
     transform 0.4s ease-in-out,
     box-shadow 0.4s ease-in-out;
-}
-
-#main::after {
-    content: '';
-    border-radius: 12px;
-    position: absolute;
-    right: -1vh;
-    top: -0.9vh;
-    height: 104%;
-    width: 102%;
-    background-image: linear-gradient(to bottom right, #213448, #F4EDD3);
-    z-index: -1;
 }
 
 #main:hover {
@@ -150,9 +134,14 @@ body {
     box-shadow: -20px 0 80px #222831, 20px 0 80px #DFD0B8;
 }
 
+#main.grow {
+    width: 45vw;
+    height: 75vh;
+}
+
 /* Сюда желательно доабвалять всё что связано в треками обложками и ссылки к ним */
 
-#fashion_ssilka, #Tyler2_ssilka {
+#fashion_ssilka, #Tyler2_ssilka, #The_lost_souls_ssilka {
     display: flex;
     flex-direction: column;
     align-items: center; /* выравнивание по левому краю */
@@ -174,11 +163,22 @@ body {
     text-decoration: underline;
 }
 
+#The_lost_souls_ssilka {
+    position: relative;
+    left: -2vw;
+}
+
+#The_lost_souls_ssilka:hover {
+    text-decoration: underline;
+}
+
 #main:hover a{
     color: inherit;
 }
 
 .tracki {
+    position: relative;
+    left: -1vw;
     width: 9.5vw;
     transition: transform 0.3s ease;
 }
@@ -231,6 +231,7 @@ body {
     border: none;
     float: left;
     left: 25%;
+    top: -2vh;
     border-radius: 10px;
     display: flex;
     opacity: 0.5;
@@ -255,11 +256,13 @@ body {
     position: absolute;
     width: 25px;
     height: 25px;
-    transition: 
+    transition:
+    rotate 0.3s ease,
     filter 0.3s ease,
     transform 0.3s ease;
 }
 #src-ds:hover {
+    rotate: 15deg;
     transform: scale(1.2);
     filter: drop-shadow(0 0 5px #5865F2);
 }
@@ -274,11 +277,13 @@ body {
     position: absolute;
     width: 25px;
     height: 25px;
-    transition: 
+    transition:
+    rotate 0.3s ease,
     filter 0.3s ease,
     transform 0.3s ease;
 }
 #src-tg:hover {
+    rotate: 15deg;
     transform: scale(1.2);
     filter: drop-shadow(0 0 5px #0088cc);
 }

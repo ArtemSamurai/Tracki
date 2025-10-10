@@ -110,7 +110,7 @@ body {
     flex-direction: column;
     justify-content: top;
     align-items: left;
-    overflow: hidden;
+    overflow-y: auto;
     background-image: linear-gradient(to bottom right, #213448, #F4EDD3);
     border-radius: 12px;
     border: none;
@@ -126,17 +126,38 @@ body {
     transform 0.4s ease-in-out,
     box-shadow 0.4s ease-in-out;
 }
+#main {
+  --sb-track-color: #232E33;
+  --sb-thumb-color: linear-gradient(to bottom right, #1B3C53, #456882);
+  --sb-size: 8px;
+}
+#main::-webkit-scrollbar {
+  width: var(--sb-size)
+}
+#main::-webkit-scrollbar-track {
+  background: transparent;
+  border-radius: 12px;
+}
+#main::-webkit-scrollbar-thumb {
+  background: var(--sb-thumb-color);
+  border-radius: 12px;
+  border: none;
+}
+#main::-webkit-scrollbar:hover {
+    width: var(--sb-size + 2)
+}
+@supports not selector(::-webkit-scrollbar) {
+  #main {
+    scrollbar-color: var(--sb-thumb-color)
+                     var(--sb-track-color);
+  }
+}
 
 #main:hover {
     opacity: 0.8;
     color: #DDC3C3;
     transform: scale(1.03);
     box-shadow: -20px 0 80px #222831, 20px 0 80px #DFD0B8;
-}
-
-#main.grow {
-    width: 45vw;
-    height: 75vh;
 }
 
 /* Сюда желательно доабвалять всё что связано в треками обложками и ссылки к ним */
@@ -180,7 +201,8 @@ body {
     position: relative;
     left: -1vw;
     width: 9.5vw;
-    transition: transform 0.3s ease;
+    transition:
+    transform 0.3s ease;
 }
 .tracki:hover {
     transform: scale(1.03);
@@ -316,12 +338,17 @@ body {
 }
 
 @media (max-width: 768px) {
-  #main {
+    #like {
+        left: 1.5%;
+    }
+    #main {
     width: 60%;          /* растягивается по ширине */
     height: auto;        /* высота под контент */
     float: none;         /* отключаем float */
     margin: 50px auto;   /* центрируем */
     flex-direction: column;
+    overflow-x: none;
+    font-size: 10px;
     align-items: center;
     margin-left: 18%;
   }
@@ -341,8 +368,13 @@ body {
     float: none;
     margin-left: -5%;
   }
+  #The_lost_souls_ssilka {
+    position: relative;
+    left: 0vw;
+   }
   .tracki {
     width: 30vw;
+    left: 0vw;
 }
 
 }

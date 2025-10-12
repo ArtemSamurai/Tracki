@@ -87,7 +87,7 @@ body {
 
 /* Это основная часть сайта в которой лежат мои любимые треки */
 
-#like {
+#like, #like_1 {
     font-family: "Quicksand", sans-serif;
     color: #fff;
     text-align: center;
@@ -96,8 +96,25 @@ body {
     font-size: 1.3em;
     left: 15%;
 }
+#like_1 {
+    position: relative;
+    left: 30%;
+}
 
-#main{
+#Open, #Close {
+    position: relative;
+    left: -1vw;
+    border: none;
+    border-radius: 20px;
+    padding: 5px 10px;
+    background-color: #456882;
+    transition: transform 0.3s ease;
+}
+#Open:hover, #Close:hover {
+    transform: scale(1.2);
+}
+
+#main, #main_1 {
     top: -2vh;
     width: 40vw;
     height: 50vh;
@@ -126,6 +143,37 @@ body {
     transform 0.4s ease-in-out,
     box-shadow 0.4s ease-in-out;
 }
+#main_1 {
+    position: absolute;
+    left: -80%;
+    opacity: 0;
+    width: 0vw;
+    height: 0vh;
+    rotate: 0deg;
+    overflow-y: hidden;
+    transition:
+    width 1s cubic-bezier(.53,.02,.73,.99),
+    height 1s cubic-bezier(.53,.02,.73,.99),
+    left 1s cubic-bezier(.53,.02,.73,.99),
+    opacity 1s cubic-bezier(.53,.02,.73,.99),
+    rotate 1s cubic-bezier(.53,.02,.73,.99);
+}
+
+#main_1:hover a {
+    color: #DDC3C3;
+}
+
+#main_1.open {
+    z-index: 999;
+    top: 8%;
+    width: 70%;
+    height: 80%;
+    left: 13%;
+    opacity: 1;
+    rotate: 360deg;
+}
+
+
 #main {
   --sb-track-color: #232E33;
   --sb-thumb-color: linear-gradient(to bottom right, #1B3C53, #456882);
@@ -162,7 +210,7 @@ body {
 
 /* Сюда желательно доабвалять всё что связано в треками обложками и ссылки к ним */
 
-#fashion_ssilka, #Tyler2_ssilka, #The_lost_souls_ssilka {
+#fashion_ssilka, #Tyler2_ssilka, #The_lost_souls_ssilka, #fashion_ssilka_1, #Tyler2_ssilka_1, #The_lost_souls_ssilka_1{
     display: flex;
     flex-direction: column;
     align-items: center; /* выравнивание по левому краю */
@@ -172,7 +220,6 @@ body {
 
 #fashion_ssilka:hover {
     text-decoration: underline;
-    color: #DDC3C3;
 }
 
 #Tyler2_ssilka {
@@ -182,6 +229,7 @@ body {
 
 #Tyler2_ssilka:hover {
     text-decoration: underline;
+    color: #DDC3C3;
 }
 
 #The_lost_souls_ssilka {
@@ -197,7 +245,7 @@ body {
     color: inherit;
 }
 
-.tracki {
+.tracki, .tracki_1 {
     position: relative;
     left: -1vw;
     width: 9.5vw;
@@ -341,6 +389,16 @@ body {
     #like {
         left: 1.5%;
     }
+    #Open, #Close {
+        transform: scale(0.8);
+        left: -40%;
+    }
+    #Close {
+        left: 22vw;
+    }
+    #Open:hover, #Close:hover {
+        transform: scale(0.9);
+    }
     #main {
     width: 60%;          /* растягивается по ширине */
     height: auto;        /* высота под контент */
@@ -351,30 +409,37 @@ body {
     font-size: 10px;
     align-items: center;
     margin-left: 18%;
-  }
-  #main::after {
-    top: -0.9vh;
-    right: -0.8vh;
-    height: 104%;
-    width: 104%;
-  }
-  #nav li {
-    top: 16vh;
-    right: 18vh;
-  }
-  #aside {
-    width: 50%;
-    height: 12vh;
-    float: none;
-    margin-left: -5%;
-  }
-  #The_lost_souls_ssilka {
-    position: relative;
-    left: 0vw;
-   }
-  .tracki {
-    width: 30vw;
-    left: 0vw;
-}
+    }
+    #main::after {
+      top: -0.9vh;
+      right: -0.8vh;
+      height: 104%;
+      width: 104%;
+    }
+    #nav li {
+      top: 16vh;
+      right: 18vh;
+    }
+    #aside {
+      width: 50%;
+      height: 12vh;
+      float: none;
+      margin-left: -5%;
+    }
+    #fashion_ssilka_1, #Tyler2_ssilka_1, #The_lost_souls_ssilka_1 {
+        position: relative;
+        left: 20vw;
+    }
+    #fashion_ssilka_1, #Tyler2_ssilka_1 {
+        left: 40vw
+    }
+
+    .tracki, .tracki_1 {
+      width: 30vw;
+      left: 0vw;
+    }
+    .tracki_1 {
+        left: 40vw;
+    }
 
 }

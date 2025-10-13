@@ -3,19 +3,21 @@
     <head>
         <link rel="icon" href="Src-img\Tyler2_Remix_.ico" type="image/x-icon">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <title>Любимые треки</title>
+        <title id="lang-title">Любимые треки</title>
         <meta charset="utf-8">
         <link rel="stylesheet" href="Css\man.css">
         <script src="Js\main.js"></script>
     </head>
     <body>
-        <div id="header"><h1>Это сайт про песни которые мне нравятся</h1></div>
-        <ul id="nav">
-            <li><a href="Htmlfaili\Uasite.html"><b>Ru</b> / Ua</a></li>
-        </ul>
+        <div id="lang-header"><h1>Это сайт про песни которые мне нравятся</h1></div>
+        <select id="lang">
+            <option value="ru" selected>Ru</option>
+            <option value="ua">Ua</option>
+            <option value="en">En</option>
+        </select>
         <div id="main_1">
             <button id="Close"><img src="Src-img\close_fullscreen.png"></button>
-            <div id="like_1">🎵Тут находятся песни которые мне нравятся🎹</div>
+            <div id="lang-like_1">🎵Тут находятся песни которые мне нравятся🎹</div>
             <a href="https://open.spotify.com/track/73PYyeg1BaHxPnlGJ4Rymu?si=7ea34959529d4f46" id="fashion_ssilka_1">Fashion - Slow</a>
             <div id="fashion"><img src="Src-img/Track.jpg" class="tracki_1"></div>
             <a href="https://open.spotify.com/track/2W6xQwCerIOmTvu48GMLxO?si=4150233ae55e4a97" id="Tyler2_ssilka_1">Tyler 2(Remix)</a>
@@ -25,7 +27,7 @@
         </div>
         <div id="main">
             <button id="Open"><img src="Src-img\open_in_full.png"></button>
-            <div id="like">🎵Тут находятся песни которые мне нравятся🎹</div>
+            <div id="lang-like">🎵Тут находятся песни которые мне нравятся🎹</div>
             <a href="https://open.spotify.com/track/73PYyeg1BaHxPnlGJ4Rymu?si=7ea34959529d4f46" id="fashion_ssilka">Fashion - Slow</a>
             <div id="fashion"><img src="Src-img/Track.jpg" class="tracki"></div>
             <a href="https://open.spotify.com/track/2W6xQwCerIOmTvu48GMLxO?si=4150233ae55e4a97" id="Tyler2_ssilka">Tyler 2(Remix)</a>
@@ -35,7 +37,7 @@
         </div>
         <!-- <button id="btn">Gradient-button</button> -->
         <div id="aside">
-            Как со мной связаться
+            <p id="lang-link">Как со мной связаться</p>
             <a href="https://discord.gg/ymx6khfy" target="_blank"><img src="Src-img/ds_src.png" id="src-ds"></a>
             <a href="https://t.me/Bountyhunterdo" target="_blank"><img src="Src-img/tg_src.png" id="src-tg"></a>
         </div>

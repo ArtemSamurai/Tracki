@@ -49,7 +49,7 @@ document.addEventListener("DOMContentLoaded", () => {
     let hash = window.location.hash
     hash = hash.substring(1)
     if(!allLang.includes(hash)) {
-        location.href = window.location.pathname + "#en";
+        location.href = window.location.pathname + "#ru";
         location.reload();
     }
     select.value = hash;

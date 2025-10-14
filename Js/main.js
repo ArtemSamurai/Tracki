@@ -26,17 +26,10 @@ document.addEventListener("DOMContentLoaded", () => {
         "en": "How to contact with me",
     }
   }
+
   const allLang = ["ru", "ua", "en"];
-  const obj_1 = document.getElementById("Close");
-  const obj = document.getElementById("Open");
   const select = document.querySelector("#lang");
-  const target = document.getElementById("main_1");
-  obj.addEventListener("click", () => {
-    target.classList.toggle("open");
-  });
-  obj_1.addEventListener("click", () => {
-    target.classList.toggle("open");
-  });
+
   select.addEventListener("change", changeUrllang);
 
   function changeUrllang() {
@@ -59,5 +52,13 @@ document.addEventListener("DOMContentLoaded", () => {
   }
   changelanguange();
 
-
+  const obj_1 = document.getElementById("Close");
+  const obj = document.getElementById("Open");
+  const target = document.getElementById("main_1");
+  obj.addEventListener("click", () => {
+    target.classList.toggle("open");
+  });
+  obj_1.addEventListener("click", () => {
+    target.classList.toggle("open");
+  });
 });

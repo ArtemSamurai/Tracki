@@ -61,4 +61,11 @@ document.addEventListener("DOMContentLoaded", () => {
   obj_1.addEventListener("click", () => {
     target.classList.toggle("open");
   });
+
+  const custom_select = document.querySelector(".custom-select");
+  const style = window.getComputedStyle(custom_select, "::after");
+  const obeject = document.getElementById("lang");
+  obeject.addEventListener("click", () => {
+    custom_select.classList.toggle("click");
+  });
 });

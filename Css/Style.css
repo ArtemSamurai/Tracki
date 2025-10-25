@@ -20,6 +20,16 @@ body {
     margin-bottom: 50px;
 }
 
+#background {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-image: linear-gradient(to bottom right, #B7A3E3, #758A93);
+    z-index: -5;
+}
+
 #lang-header {
     float: left;
     font-family: "Quicksand", sans-serif;
@@ -59,7 +69,8 @@ body {
   appearance: none;
   padding: 5px 30px 5px 10px;
   border-radius: 5px;
-  background-color: #333;
+  border: none;
+  background-color: #232E33;
   cursor: pointer;
   font-size: 16px;
   color: #fff;
@@ -277,7 +288,7 @@ body {
     left: 30vw;
 }
 
-.tracki:hover {
+.tracki:hover, .tracki_1:hover {
     transform: scale(1.03);
 }
 /* #btn {
